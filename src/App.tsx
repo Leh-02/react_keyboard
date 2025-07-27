@@ -1,13 +1,17 @@
-import React from "react";
+import React from 'react';
+
+type State = {
+  item: string;
+}
 
 export class App extends React.Component {
-  state = {
-    item: ''
+  state:State = {
+    item: '',
   };
 
   handleKey = (event: KeyboardEvent) => {
     this.setState({ item: event.key });
-  }
+  };
 
   componentDidMount(): void {
     window.addEventListener('keyup', this.handleKey);
