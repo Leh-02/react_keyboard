@@ -2,10 +2,10 @@ import React from 'react';
 
 type State = {
   item: string;
-}
+};
 
-export class App extends React.Component {
-  state:State = {
+export class App extends React.Component<{}, State> {
+  state: State = {
     item: '',
   };
 
